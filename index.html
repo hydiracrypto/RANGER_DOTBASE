@@ -43,6 +43,36 @@
 	<script src="scripts/main.js" type="module"></script>
 	<script src="scripts/register-sw.js" type="module"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+
+ const w =
+ document.getElementById(
+   "connectWalletBtn"
+ );
+
+ if(w)
+   w.onclick = connectWallet;
+
+ const f =
+ document.getElementById(
+   "connectFarcasterBtn"
+ );
+
+ if(f)
+   f.onclick = loginFarcaster;
+
+ const l =
+ document.getElementById(
+   "showLeaderboardBtn"
+ );
+
+ if(l)
+   l.onclick = showLeaderboard;
+
+});
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 window.RANGERCFG={url:'https://mvfgioxgbnfroxdqonyv.supabase.co',key:'sb_publishable_9ZAfSfcg-WFnU33Ix0-dnA_kyX4J0X5'};
