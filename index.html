@@ -42,12 +42,20 @@
 	<script src="scripts/offlineclient.js" type="module"></script>
 	<script src="scripts/main.js" type="module"></script>
 	<script src="scripts/register-sw.js" type="module"></script>
-	
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+window.RANGERCFG={url:'https://mvfgioxgbnfroxdqonyv.supabase.co',key:'sb_publishable_9ZAfSfcg-WFnU33Ix0-dnA_kyX4J0X5'};
+</script>
+
+<script type="module">
+import { sdk } from "https://esm.sh/@farcaster/miniapp-sdk";
+window.farcasterSDK=sdk;
+</script>
 <script src="supabase.js"></script>
 <script src="wallet.js"></script>
 <script src="farcaster.js"></script>
 <script src="leaderboard.js"></script>
-
 
 <script>
 document.addEventListener("DOMContentLoaded",()=>{
@@ -78,16 +86,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 });
 </script>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-window.RANGERCFG={url:'https://mvfgioxgbnfroxdqonyv.supabase.co',key:'sb_publishable_9ZAfSfcg-WFnU33Ix0-dnA_kyX4J0X5'};
-</script>
-
-<script type="module">
-import { sdk } from "https://esm.sh/@farcaster/miniapp-sdk";
-window.farcasterSDK=sdk;
-</script> 
 
 
 </body>

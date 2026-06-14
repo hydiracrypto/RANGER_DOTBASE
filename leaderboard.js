@@ -1,42 +1,3 @@
-async function showLeaderboard(){
-
-const { data,error } =
-await supabaseClient
-.from("leaderboard")
-.select("*")
-.order("score",{ascending:false})
-.limit(10);
-
-if(error){
-console.error(error);
-return;
-}
-
-const panel =
-document.getElementById(
-"leaderboard-panel"
-);
-
-const list =
-document.getElementById(
-"leaderboard-list"
-);
-
-panel.style.display="block";
-
-list.innerHTML =
-(data||[])
-.map((row,index)=>
-`<div>#${index+1} ${
-   row.username ||
-   row.wallet ||
-   "Player"
- } - ${row.score}</div>`
-)
-.join("");
-
-}
-
 window.scoreSubmitted = false;
 
 async function saveLeaderboardScore(score){
@@ -56,4 +17,38 @@ async function saveLeaderboardScore(score){
     console.error(err);
   }
 
+}
+
+async function showLeaderboard(){
+
+const { data,error } =
+await supabaseClient
+.from("leaderboard")
+.select("*")
+.order("score",{ascending:false})
+.limit(10);
+
+if(error){
+console.error(error);
+return;
+}
+
+document.getElementById(
+"leaderboard-panel"
+).style.display="block";
+
+document.getElementById(
+"leaderboard-list"
+).innerHTML =
+(data||[])
+.map((row,index)=>
+`<div style="padding:6px;border-bottom:1px solid #333">
+#${index+1}
+${row.username || row.wallet || "Player"}
+
+- ${row.score}
+
+ </div>`
+ )
+ .join("");
 }
