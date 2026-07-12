@@ -1,0 +1,16 @@
+{
+  "name": "ranger-dotbase",
+  "version": "1.0.0",
+  "description": "Ranger vs Zombies game with Vercel Speed Insights",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'No build process required for static site'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": ["game", "construct3"],
+  "author": "Muscle-SS",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  }
+}
