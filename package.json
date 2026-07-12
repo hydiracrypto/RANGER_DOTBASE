@@ -11,6 +11,6 @@
   "author": "Muscle-SS",
   "license": "ISC",
   "dependencies": {
-    "@vercel/speed-insights": "^1.0.12"
+    "@vercel/speed-insights": "^1.3.1"
   }
 }
