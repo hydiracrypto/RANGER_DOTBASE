@@ -62,6 +62,13 @@ window.RANGERCFG={url:'https://mvfgioxgbnfroxdqonyv.supabase.co',key:'sb_publish
 import { sdk } from "https://esm.sh/@farcaster/miniapp-sdk";
 window.farcasterSDK=sdk;
 </script>
+
+<!-- Vercel Speed Insights -->
+<script type="module">
+import { injectSpeedInsights } from "https://cdn.jsdelivr.net/npm/@vercel/speed-insights@2.0.0/dist/index.mjs";
+injectSpeedInsights();
+</script>
+
 <script src="supabase.js"></script>
 <script src="wallet.js"></script>
 <script src="farcaster.js"></script>
